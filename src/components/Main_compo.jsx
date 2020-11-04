@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios';
+import './Main.css';
 
 export default function Main_compo() {
     const [name,setname]= useState('');
@@ -54,7 +55,7 @@ export default function Main_compo() {
             <input
                     type="text"
                     placeholder="Enter Id for Update"
-                    // className="question-container"
+                    className="inputs"
                     value={id}
                     onChange={(evt) => {
                     setid(evt.target.value);
@@ -63,7 +64,7 @@ export default function Main_compo() {
             <input
                 type="text"
                 placeholder="Enter Name"
-                // className="question-container"
+                className="inputs"
                 value={name}
                 onChange={(evt) => {
                 setname(evt.target.value);
@@ -72,16 +73,16 @@ export default function Main_compo() {
             <input
                 type="text"
                 placeholder="Enter Age"
-                // className="question-container"
+                className="inputs"
                 value={age}
                 onChange={(evt) => {
                 setage(evt.target.value);
             }}
             />
-            <button onClick={submitAdd}>ADD</button>
-            <button onClick={submitUpdate}>UPDATE</button>
+            <button className="buttons" onClick={submitAdd}>ADD</button>
+            <button className="buttons" onClick={submitUpdate}>UPDATE</button>
             <h2>Total Api Count</h2>            
-            <div><button onClick={countApi}>COUNT</button></div>
+            <div><button className="buttons" onClick={countApi}>COUNT</button></div>
         </div>
     )
 }
